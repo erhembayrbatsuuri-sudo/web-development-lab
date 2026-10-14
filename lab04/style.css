@@ -1,0 +1,143 @@
+
+/* Ерөнхий тохиргоо */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f9;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #263b73;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.header h1 {
+    margin: 0 0 10px;
+}
+
+/* Navigation - Flexbox */
+.navbar {
+    background-color: #17264d;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-list a:hover {
+    color: #ffd166;
+}
+
+/* Main layout - Flexbox */
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* Main content */
+.main-content {
+    flex: 3;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.main-content h2 {
+    color: #263b73;
+}
+
+/* Cards - CSS Grid */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Card */
+.card {
+    background-color: #e8edfa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card h3 {
+    color: #263b73;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar h2 {
+    color: #263b73;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #263b73;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Жижиг дэлгэцэд тохируулах */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main-content,
+    .sidebar {
+        width: 100%;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
