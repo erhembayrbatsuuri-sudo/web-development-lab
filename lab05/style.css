@@ -1,0 +1,145 @@
+
+/* Ерөнхий тохиргоо */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f9;
+    color: #222;
+}
+
+/* Дээд хэсэг */
+header {
+    background-color: #183b66;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Нүүр хэсэг */
+.hero {
+    background-color: #dceaff;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    color: #183b66;
+    font-size: 36px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #183b66;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Танилцуулгын хэсэг */
+.content {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    flex: 1;
+    min-width: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #cccccc;
+}
+
+/* Доод хэсэг */
+footer {
+    background-color: #183b66;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 40%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    header {
+        padding: 15px 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .content {
+        padding: 20px 15px;
+    }
+}
