@@ -1,0 +1,73 @@
+
+@use "functions" as f;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.5s;
+}
+
+header {
+  background: var(--card);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background: var(--main);
+  color: f.contrast(blue);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-small);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.welcome {
+  background: lightblue;
+  color: black;
+  text-align: center;
+  padding: 60px;
+  animation: move 2s;
+
+  h2 {
+    font-size: f.rem(35px);
+    margin-bottom: 10px;
+  }
+}
+
+.title {
+  text-align: center;
+  margin: 30px;
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

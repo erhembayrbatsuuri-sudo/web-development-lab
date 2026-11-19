@@ -1,0 +1,26 @@
+{
+  "name": "web-development-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass lab07/scss/main.scss lab07/css/style.css --style=compressed",
+    "watch": "sass --watch lab07/scss/main.scss:lab07/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erhembayrbatsuuri-sudo/web-development-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/erhembayrbatsuuri-sudo/web-development-lab/issues"
+  },
+  "homepage": "https://github.com/erhembayrbatsuuri-sudo/web-development-lab#readme",
+  "devDependencies": {
+    "sass": "^1.108.2"
+  }
+}

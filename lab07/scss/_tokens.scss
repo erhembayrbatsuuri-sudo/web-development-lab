@@ -1,0 +1,42 @@
+
+$colors: (
+  "bg": white,
+  "text": black,
+  "card": white,
+  "main": blue,
+  "welcome": lightblue
+);
+
+$dark-colors: (
+  "bg": #222,
+  "text": white,
+  "card": #333
+);
+
+$radii: (
+  "small": 5px,
+  "medium": 10px
+);
+
+$breakpoints: (
+  "tablet": 700px,
+  "mobile": 450px
+);
+
+// CSS custom properties
+:root {
+  @each $name, $value in $colors {
+    --#{$name}: #{$value};
+  }
+
+  @each $name, $value in $radii {
+    --radius-#{$name}: #{$value};
+  }
+}
+
+// Dark mode өнгө
+body.dark {
+  @each $name, $value in $dark-colors {
+    --#{$name}: #{$value};
+  }
+}

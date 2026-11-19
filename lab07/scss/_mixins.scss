@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "tokens" as t;
+
+// Responsive тохиргоо
+@mixin respond($device) {
+  @media (max-width: map.get(t.$breakpoints, $device)) {
+    @content;
+  }
+}
+
+// Элемент голлуулах
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

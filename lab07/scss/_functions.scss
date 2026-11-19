@@ -1,0 +1,17 @@
+
+@use "sass:math";
+@use "sass:color";
+
+// px-ийг rem болгох
+@function rem($px) {
+  @return math.div($px, 16px) * 1rem;
+}
+
+// Өнгөнд тохирох текстийн өнгө сонгох
+@function contrast($color) {
+  @if color.channel($color, "lightness", $space: hsl) > 50% {
+    @return #222;
+  } @else {
+    @return white;
+  }
+}

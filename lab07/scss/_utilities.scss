@@ -1,0 +1,12 @@
+
+@use "tokens" as t;
+
+@each $name, $value in t.$colors {
+  .text-#{$name} {
+    color: $value;
+  }
+
+  .bg-#{$name} {
+    background-color: $value;
+  }
+}
